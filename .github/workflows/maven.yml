@@ -26,7 +26,7 @@ jobs:
       uses: glarivie/render-deploy-service-action@v1.0.5
       with:
         # The ID of the service. See https://api-docs.render.com/reference/create-deploy.
-        serviceId: srv-cr2auvdsvqrc73cm5rng
+        serviceId: ${{secrets.SERVICEID}}
         # Authenticate all requests to the Render API with an API key.  See https://api-docs.render.com/reference/authentication.
-        apiKey: wWPHtP9Ihv0
+        apiKey: ${{secrects.APIKEY}}
           
