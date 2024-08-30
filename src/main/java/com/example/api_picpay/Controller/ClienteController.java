@@ -6,8 +6,6 @@ import com.example.api_picpay.Service.ClienteService;
 import jakarta.persistence.Id;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Size;
-import org.apache.coyote.Request;
-import org.aspectj.apache.bcel.Repository;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -95,7 +93,7 @@ public class ClienteController {
                 clienteNovo.setTelefone(telefone);
             }
 
-            //Validar os dados
+            //Valida os dados
             DataBinder dataBinder = new DataBinder(clienteNovo);
             dataBinder.setValidator(validator);
             dataBinder.validate();
