@@ -27,6 +27,6 @@ jobs:
       with:
         # The ID of the service. See in https://api-docs.render.com/reference/create-deploy.
         serviceId: ${{secrets.SERVICEID}}
-        # Authenticate all requests to the Render API with an API key.  See https://api-docs.render.com/reference/authentication.
+        # Authenticate all requests to the Render API with an API key. See https://api-docs.render.com/reference/authentication.
         apiKey: ${{secrets.APIKEY}}
           
