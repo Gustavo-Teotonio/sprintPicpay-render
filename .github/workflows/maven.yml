@@ -27,4 +27,3 @@ jobs:
       with:
         service-id: ${{secrets.SERVICEID}}
         api-key: ${{secrets.APIKEY}}
-          
