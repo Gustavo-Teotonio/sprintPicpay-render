@@ -23,7 +23,7 @@ public class ContaService {
     public Conta findByAccountNumber(String accountNumber){
         return contaRepository.findById(accountNumber).orElseThrow(() ->
                 new RuntimeException("Conta não encontrado"));
-    }
+    } //
 
     public List<Conta> findAccountsBySaldo(double saldo){
         return contaRepository.findContasBySaldoGreaterThanEqual(saldo);
