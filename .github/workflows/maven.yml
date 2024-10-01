@@ -29,10 +29,9 @@ jobs:
         api-key: ${{secrets.APIKEY}}
 
     - name: Deploy na EC2
-    #> private_key && chmod 400 private_key
       run: |
-        echo "${{secrets.KEY_EC2_E}}" 
-        ssh -o StrictHostKeyChecking=no -i "private_key.pem" ubuntu@ec2-100-29-2-212.compute-1.amazonaws.com "
+        echo "${{secrets.KEY_EC2_E}}" > private_key && chmod private_key 400
+        ssh -o StrictHostKeyChecking=no -i "private_key" ubuntu@ec2-100-29-2-212.compute-1.amazonaws.com"
           cd /home/ubuntu/sprintPicpay-render && 
           git pull &&
           mvn clean package - DskipTests &&
